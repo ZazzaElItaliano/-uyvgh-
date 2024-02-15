@@ -1,10 +1,3 @@
-"use strict"
-
-
-
-let currentQuestion = 1;
-let attempts = 0;
-
 function checkAnswer(correct) {
     if (correct) {
         document.getElementById(`question${currentQuestion}`).classList.add('hidden');
@@ -13,9 +6,9 @@ function checkAnswer(correct) {
         if (currentQuestion <= 7) {
             document.getElementById(`question${currentQuestion}`).classList.remove('hidden');
         } else {
-            document.getElementById('githubCat').style.display = 'block';
-            document.getElementById('speechBubble').style.display = 'block';
-            document.getElementById('responseForm').style.display = 'block';
+            document.getElementById('dockerWhale').style.display = 'block';
+            document.getElementById('speechBubble1').style.display = 'block';
+            document.getElementById('responseForm1').style.display = 'block';
         }
     } else {
         attempts++;
@@ -27,31 +20,32 @@ function checkAnswer(correct) {
             document.getElementById('question1').classList.remove('hidden');
             attempts = 0; // Reiniciar el contador de intentos
             alert('Has agotado tus intentos en esta pregunta. Volviendo a la primera pregunta.');
+            // Ocultar la imagen de la ballena y el reto
+            document.getElementById('dockerWhale').style.display = 'none';
+            document.getElementById('speechBubble1').style.display = 'none';
+            document.getElementById('responseForm1').style.display = 'none';
         } else {
             alert('Respuesta incorrecta. Por favor, inténtalo de nuevo.');
         }
     }
 }
 
-function checkLetter() {
-    const letterInput = document.getElementById('letterInput').value.toLowerCase();
-    if (letterInput === 'b') {
-        alert('¡Respuesta correcta! Desvelando el secreto...\nhttps://github.com');
-        window.location.href = 'segundoReto.html';
-        return false;
-       
+function checkWord() {
+    const wordInput = document.getElementById('wordInput').value.toLowerCase();
+    if (wordInput === 'socorro') {
+        alert('¡Respuesta correcta! Desvelando la siguiente pista\n/almarlin');
+        window.location.replace('../tercerReto.html'); 
     } else {
-        alert('Respuesta incorrecta. Volviendo a la primera pregunta.');
-        currentQuestion = 1; // Reiniciar a la primera pregunta
+        alert('Palabra incorrecta. Volviendo a la primera pregunta.');
+        currentQuestion = 1;
         document.querySelectorAll('.question').forEach(question => {
             question.classList.add('hidden');
         });
         document.getElementById('question1').classList.remove('hidden');
-        document.getElementById('githubCat').style.display = 'none'; // Ocultar el gato de GitHub
-        document.getElementById('speechBubble').style.display = 'none'; // Ocultar el bocadillo
-        document.getElementById('responseForm').style.display = 'none'; // Ocultar el formulario de respuesta
+        // Ocultar la imagen de la ballena y el reto
+        document.getElementById('dockerWhale').style.display = 'none';
+        document.getElementById('speechBubble1').style.display = 'none';
+        document.getElementById('responseForm1').style.display = 'none';
         return false;
     }
 }
-
-

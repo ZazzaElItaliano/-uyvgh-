@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="question" id="question1">
+        <h2>Pregunta 1: ¿Qué es Docker?</h2>
+        <button onclick="checkAnswer(0)">Una plataforma de virtualización basada en hipervisores</button>
+        <button onclick="checkAnswer(0)">Un sistema operativo</button>
+        <button onclick="checkAnswer(1)">Una plataforma de contenedores</button>
+        <button onclick="checkAnswer(0)">Un sistema de archivos distribuido</button>
+    </div>
+    <div class="question hidden" id="question2">
+        <h2>Pregunta 2: ¿Qué es un contenedor en Docker?</h2>
+        <button onclick="checkAnswer(0)">Un servidor virtualizado</button>
+        <button onclick="checkAnswer(0)">Una máquina virtual</button>
+        <button onclick="checkAnswer(1)">Un entorno de ejecución ligero y portátil</button>
+        <button onclick="checkAnswer(0)">Un archivo de configuración</button>
+    </div>
+    <div class="question hidden" id="question3">
+        <h2>Pregunta 3: ¿Qué comando de Docker se utiliza para construir una imagen a partir de un Dockerfile?</h2>
+        <button onclick="checkAnswer(0)">docker start</button>
+        <button onclick="checkAnswer(0)">docker run</button>
+        <button onclick="checkAnswer(1)">docker build</button>
+        <button onclick="checkAnswer(0)">docker create</button>
+    </div>
+    <div class="question hidden" id="question4">
+        <h2>Pregunta 4: ¿Cuál es la diferencia entre una imagen y un contenedor en Docker?</h2>
+        <button onclick="checkAnswer(0)">Una imagen es una instancia en ejecución de un contenedor</button>
+        <button onclick="checkAnswer(0)">Un contenedor es una plantilla de configuración de una imagen</button>
+        <button onclick="checkAnswer(0)">Una imagen es un entorno de ejecución aislado</button>
+        <button onclick="checkAnswer(1)">Una imagen es una plantilla de solo lectura, mientras que un contenedor es una instancia en ejecución de esa imagen</button>
+    </div>
+    <div class="question hidden" id="question5">
+        <h2>Pregunta 5: ¿Qué comando de Docker se utiliza para listar los contenedores en ejecución?</h2>
+        <button onclick="checkAnswer(0)">docker ps -a</button>
+        <button onclick="checkAnswer(0)">docker inspect</button>
+        <button onclick="checkAnswer(0)">docker info</button>
+        <button onclick="checkAnswer(1)">docker ps</button>
+    </div>
+    <div class="question hidden" id="question6">
+        <h2>Pregunta 6: ¿Qué es un Dockerfile?</h2>
+        <button onclick="checkAnswer(0)">Una imagen de Docker</button>
+        <button onclick="checkAnswer(1)">Un archivo de texto que contiene instrucciones para construir una imagen de Docker</button>
+        <button onclick="checkAnswer(0)">Una instancia en ejecución de un contenedor de Docker</button>
+        <button onclick="checkAnswer(0)">Una herramienta de monitoreo de contenedores</button>
+    </div>
+    <div class="question hidden" id="question7">
+        <h2>Pregunta 7: ¿Qué es Docker Compose?</h2>
+        <button onclick="checkAnswer(1)">Una herramienta para definir y ejecutar aplicaciones Docker multicontenedor</button>
+        <button onclick="checkAnswer(0)">Una plataforma de administración de contenedores</button>
+        <button onclick="checkAnswer(0)">Un servicio en la nube para contenedores</button>
+        <button onclick="checkAnswer(0)">Un sistema operativo basado en contenedores</button>
+    </div>
+    <img id="dockerWhale" src="https://upload.wikimedia.org/wikipedia/commons/e/ea/Docker_%28container_engine%29_logo_%28cropped%29.png" alt="Ballena de Docker">
     
+
+        <div id="speechBubble1">
+            <p id="message">Mientras respondías a las preguntas me he encontrado esta nota, la cual creo que contiene un mensaje secreto:<br> "Saludos Hershel: debo pedir tu ayuda <br>otra vez. Un extraño gigante aparece al <br>caer la noche en nuestro pueblo. <br>Oculto en una espesa niebla, este ser <br>recorre las calles destrozándolo todo. Te<br> ruego que vengas en cuanto tengas la<br> oportunidad a prestarnos ayuda"</p>
+            <!-- Formulario para ingresar una palabra -->
+            <form id="responseForm1" onsubmit="return checkWord()">
+                <label for="wordInput">¿Cuál será la palabra escondida?:</label>
+                <input type="text" id="wordInput" name="wordInput" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+
+    <script src="js/prematuro.js"></script>
+    <script src="js/prematuro2.js"></script>
 </body>
 </html>

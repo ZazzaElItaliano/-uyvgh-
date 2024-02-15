@@ -1,0 +1,63 @@
+body { background-image: url('https://estaticos-cdn.prensaiberica.es/clip/665633aa-b6f7-4df3-a3e7-7fd8825db55e_source-aspect-ratio_default_0.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Evita el desplazamiento de la página */
+}
+h1,h4 {
+ text-align: center;
+ color: rgb(255, 255, 255);
+
+}
+
+p{
+  
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: 15px;
+       
+      
+}
+#backgroundContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.hidden {
+    position: absolute;
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+    color: rgb(172, 147, 147); /* Cambia el color del texto si es necesario */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Añade un ligero sombreado al texto */
+}
+
+#word1 {
+    font-size:24px;
+    top: 40%;
+    left: 30%;
+}
+
+#word2 {
+    
+    
+    font-size:17px;
+    top: 50%;
+    left: 60%;
+}
+
+#word3 {
+    font-size:17px;
+    top: 70%;
+    left: 10%;
+}
+
+#word4 {
+    font-size:17px;
+    top: 80%;
+    left: 70%;
+}
+.clicked {
+    color: red; /* Cambiar el color a tu gusto */
+}
