@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+       
+        <div class="question" id="question1">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 1: ¿Cuál es el comando para deshacer los cambios en un archivo específico en Git sin afectar otros archivos? ptos:2</h4>
+            <button onclick="checkAnswer(0)">git reset</button>
+            <button onclick="checkAnswer(0)">git checkout --all</button>
+            <button onclick="checkAnswer(1)">git checkout --</button>
+            <button onclick="checkAnswer(0)">git revert</button>
+        </div>
+        <div class="question hidden" id="question2">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 2: ¿Qué significa la abreviatura "SHA" en el contexto de Git? ptos:2</h4>
+            <button onclick="checkAnswer(1)">Secure Hash Algorithm</button>
+            <button onclick="checkAnswer(0)">Stable Hash Address</button>
+            <button onclick="checkAnswer(0)">Source Hash Attribute</button>
+            <button onclick="checkAnswer(0)">Software Hash Assignment</button>
+        </div>
+        <div class="question hidden" id="question3">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 3: ¿Qué comando de Git se usa para listar todas las ramas, incluidas las remotas? ptos:2</h4>
+            <button onclick="checkAnswer(0)">git branch</button>
+            <button onclick="checkAnswer(1)">git branch -a</button>
+            <button onclick="checkAnswer(0)">git remote -a</button>
+            <button onclick="checkAnswer(0)">git show-branches</button>
+        </div>
+        <div class="question hidden" id="question4">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 4: ¿Cuál es el propósito principal de .gitignore en un repositorio Git? ptos:2</h4>
+            <button onclick="checkAnswer(0)">Omitir archivos durante el seguimiento</button>
+            <button onclick="checkAnswer(0)">Encriptar archivos importantes</button>
+            <button onclick="checkAnswer(1)">Especificar archivos y directorios a ignorar</button>
+            <button onclick="checkAnswer(0)">Revertir cambios no deseados</button>
+        </div>
+        <div class="question hidden" id="question5">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 5: ¿Qué comando de Git se utiliza para mostrar las diferencias entre el contenido del área de preparación y el último commit? ptos:2</h2>
+            <button onclick="checkAnswer(0)">git compare</button>
+            <button onclick="checkAnswer(0)">git diff HEAD</button>
+            <button onclick="checkAnswer(1)">git diff --staged</button>
+            <button onclick="checkAnswer(0)">git status --diff</button>
+        </div>
+        <div class="question hidden" id="question6">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 6: ¿Qué hace el comando "git cherry-pick" en Git? ptos:2</h4>
+            <button onclick="checkAnswer(1)">Aplica un commit específico a la rama actual</button>
+            <button onclick="checkAnswer(0)">Borra todos los cambios en la rama actual</button>
+            <button onclick="checkAnswer(0)">Crea una nueva rama</button>
+            <button onclick="checkAnswer(0)">Revoca el commit más reciente</button>
+        </div>
+        <div class="question hidden" id="question7">
+            <h1>Test sobre git</h1>
+            <p>Atención!!! suma los puntos de cada pregunta, dos fallos  seran castigados empezando desde el principio</p>
+            <h4>Pregunta 7: ¿Qué es un "fork" en GitHub? ptos:1</h4>
+            <button onclick="checkAnswer(1)">Una copia de un repositorio en el que se puede trabajar de forma independiente ptos:1</button>
+            <button onclick="checkAnswer(0)">Un tipo de error de Git</button>
+            <button onclick="checkAnswer(0)">Una característica para rastrear cambios</button>
+            <button onclick="checkAnswer(0)">Un comando para fusionar ramas</button>
+        </div>
+
+        <img id="githubCat" src="https://octodex.github.com/images/original.png" alt="GitHub Cat">
+        <div id="speechBubble">
+            <p>Al sumar un número habrás obtenido, yo escribí el número rápido y me gustaría saber a qué letra del abecedario corresponde, responde correctamente y un secreto será desvelado. Apunta el secreto desvelado para acceder al siguiente repositorio</p>
+            <form id="responseForm" onsubmit="return checkLetter()">
+                <label for="letterInput">Introduce una letra:</label>
+                <input type="text" id="letterInput" name="letterInput">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        <script src="js/prematuro.js"></script>
+</body>
+</html>
