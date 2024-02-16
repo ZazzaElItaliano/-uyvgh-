@@ -34,7 +34,8 @@ function checkWord() {
     const wordInput = document.getElementById('wordInput').value.toLowerCase();
     if (wordInput === 'socorro') {
         alert('¡Respuesta correcta! Desvelando la siguiente pista\n/almarlin');
-        window.location.replace('../tercerReto.html'); 
+        // window.location.href = '/tercerReto.html';
+        return true;
     } else {
         alert('Palabra incorrecta. Volviendo a la primera pregunta.');
         currentQuestion = 1;
