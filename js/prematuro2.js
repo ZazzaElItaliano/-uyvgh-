@@ -19,7 +19,7 @@ function checkAnswer(correct) {
             });
             document.getElementById('question1').classList.remove('hidden');
             attempts = 0; // Reiniciar el contador de intentos
-            alert('Has agotado tus intentos en esta pregunta. Volviendo a la primera pregunta.');
+            alert('Has probado suerte demasiadas veces, Te teletransportaré a la primer apregunta .');
             // Ocultar la imagen de la ballena y el reto
             document.getElementById('dockerWhale').style.display = 'none';
             document.getElementById('speechBubble1').style.display = 'none';
@@ -33,7 +33,7 @@ function checkAnswer(correct) {
 function checkWord() {
     const wordInput = document.getElementById('wordInput').value.toLowerCase();
     if (wordInput === 'socorro') {
-        alert('¡Respuesta correcta! Desvelando la siguiente pista\n/almarlin');
+        alert('¡Respuesta correcta! Desvelando la siguiente pista, JUNTA ESTE ENLACE CON EL ANTERIOR \n/almarlin');
         // window.location.href = '/tercerReto.html';
         return true;
     } else {

@@ -26,7 +26,7 @@ function checkAnswer(correct) {
             });
             document.getElementById('question1').classList.remove('hidden');
             attempts = 0; // Reiniciar el contador de intentos
-            alert('Has agotado tus intentos en esta pregunta. Volviendo a la primera pregunta.');
+            alert('Has probado suerte demasiadas veces, Te teletransportaré a la primer apregunta .');
         } else {
             alert('Respuesta incorrecta. Por favor, inténtalo de nuevo.');
         }
@@ -36,12 +36,12 @@ function checkAnswer(correct) {
 function checkLetter() {
     const letterInput = document.getElementById('letterInput').value.toLowerCase();
     if (letterInput === 'b') {
-        alert('¡Respuesta correcta! Desvelando el secreto...\nhttps://github.com');
+        alert('¡Respuesta correcta! Desvelando el secreto..., Apunta la primera parte del enlace:\nhttps://github.com ');
         window.location.href = 'segundoReto.html';
         return false;
        
     } else {
-        alert('Respuesta incorrecta. Volviendo a la primera pregunta.');
+        alert('Lo siento FALLASTE. Volviendo a la primera pregunta.');
         currentQuestion = 1; // Reiniciar a la primera pregunta
         document.querySelectorAll('.question').forEach(question => {
             question.classList.add('hidden');
